@@ -1,18 +1,18 @@
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",              // XAMPP por defecto no tiene contraseña
-  database: "inventario_electronico",
+  host:     process.env.DB_HOST     || "localhost",
+  user:     process.env.DB_USER     || "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME     || "inventario_electronico",
 });
 
 connection.connect((err) => {
   if (err) {
-    console.error("Error de conexión a MySQL:", err);
-    process.exit(1);         // Detener el servidor si no hay BD
+    console.error("❌ Error de conexión a MySQL:", err);
+    process.exit(1);
   }
-  console.log("✅ Conectado a la base de datos inventario_electronico");
+  console.log("✅ Conectado a:", process.env.DB_NAME || "inventario_electronico");
 });
 
 module.exports = connection;
