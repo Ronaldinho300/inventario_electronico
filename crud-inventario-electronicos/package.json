@@ -1,0 +1,27 @@
+{
+  "name": "inventario",
+  "version": "1.0.0",
+  "description": "proyecto de prueva",
+  "keywords": [
+    "01"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ronaldinho300/inventario_electronico.git"
+  },
+  "license": "ISC",
+  "author": "Yack",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "02"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
